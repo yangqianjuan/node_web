@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <!-- <title>tag/takeway</title> -->
+    <desc>Created with Sketch.</desc>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="16-白名单列表" transform="translate(-277.000000, -434.000000)">
+            <g id="tag/takeway" transform="translate(277.000000, 434.000000)">
+                <polygon id="tag-bg" fill="#FF9B32" opacity="0.871907552" points="0 0 17.0229475 0 31 14.013115 31 31"></polygon>
+                <text id="保洁&amp;保安" transform="translate(19.707107, 11.292893) rotate(45.000000) translate(-19.707107, -11.292893) " font-family="PingFangSC-Medium, PingFang SC" font-size="5" font-weight="400" line-spacing="6" fill="#FFFFFF">
+                    <tspan x="7.70710678" y="13.2928932">保洁&amp;保安</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
