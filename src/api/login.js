@@ -17,10 +17,8 @@ export function login(username, password) {
 // }
 
 export function getInfo(token) {
-  return request({
-    url: '/user/info',
-    method: 'post',
-    params: { token }
+  return request.get('/user/info', {
+    token
   })
 }
 

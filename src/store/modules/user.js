@@ -82,7 +82,7 @@ const user = {
       return new Promise((resolve, reject) => {
         login(username, userInfo.password)
           .then(response => {
-            const data = response.data
+            const data = response.result
             setToken(data.token)
             // setUserName(userInfo.username)
             setUserName(data.name)
