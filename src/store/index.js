@@ -1,25 +1,38 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import getters from './getters'
+import {getAdminInfo} from '@/api/getData'
 
 Vue.use(Vuex)
 
-// https://webpack.js.org/guides/dependency-management/#requirecontext
-const modulesFiles = require.context('./modules', true, /\.js$/)
+const state = {
+	adminInfo: {
+		avatar: 'default.jpg'
+	},
+}
 
-// you do not need `import app from './modules/app'`
-// it will auto require all vuex module from modules file
-const modules = modulesFiles.keys().reduce((modules, modulePath) => {
-  // set './app.js' => 'app'
-  const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1')
-  const value = modulesFiles(modulePath)
-  modules[moduleName] = value.default
-  return modules
-}, {})
+const mutations = {
+	saveAdminInfo(state, adminInfo){
+		state.adminInfo = adminInfo;
+	}
+}
 
-const store = new Vuex.Store({
-  modules,
-  getters
+const actions = {
+	async getAdminData({commit}){
+		try{
+			const res = await getAdminInfo()
+			if (res.status == 1) {
+				commit('saveAdminInfo', res.data);
+			}else{
+				throw new Error(res.type)
+			}
+		}catch(err){
+			// console.log(err.message)
+		}
+	}
+}
+
+export default new Vuex.Store({
+	state,
+	actions,
+	mutations,
 })
-
-export default store
